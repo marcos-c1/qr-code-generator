@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>QR Code Generator</title>
+</head>
+
+<body>
+    <main>
+        <div class="qr__code__container">
+            <div class="qr__code__card">
+                <img src="qr-code.png" alt="QR code icon" id="qr-icon">
+                <label for="types" style="margin-top: 5vh;">Choose a type of QR Code:</label>
+                <select name="types" class="con-select" style="margin: 4vh;">
+                    <option value="wifi-con">Wi-fi Connection</option>
+                    <option value="link-con">Link redirection</option>
+                </select>
+                <form>
+                    <div class="wifi__con__div">
+                        <input type="text" autocomplete="false" autofocus="true" id="ssid" placeholder="SSID" name="ssid" required />
+                        <div class="pwd-div">
+                            <input type="password" id="pwd" minlength="8" placeholder="Password" name="pwd" required />
+                            <a>👀</a>
+                        </div>
+                    </div>
+                    <div class="link__red__con">
+                        <input type="text" hidden name="link" id="link-red" placeholder="Link redirect">
+                    </div>
+                    <canvas class="qr-code" id="qr__code"></canvas>
+                    <button type="submit" name="gen-btn" id="gen-btn">Generate</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="script.js"></script>
+
+</html>
